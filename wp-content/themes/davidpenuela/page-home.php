@@ -33,7 +33,7 @@
 	                </div>
 	                <div class="collapse navbar-collapse custom-collapse" id="mainMenu">
 	                    <ul id="scrollMenu" class="nav navbar-nav">
-	                        <li><a class="scroll-link" href="#" data-id="homeVimeo">Home</a></li>
+	                        <li><a class="scroll-link" href="#" data-id="video">Home</a></li>
 	                        <li><a class="scroll-link" href="#" data-id="project">Project</a></li>
 	                        <li><a class="scroll-link" href="#" data-id="about">About</a></li>
 	                        <li><a class="scroll-link" href="#" data-id="news">News</a></li>
@@ -45,28 +45,74 @@
 	        </nav>
 		</header><!-- #masthead -->
 
-		<div class="container-fluid" id="load2">
-		
+		<div class="container-fluid section" id="load2">
 			<div class="row homeVimeo" id="video">
-				<div class="col-xs-12">
+				<div class="col-xs-12 video">
 					 <iframe src="//player.vimeo.com/video/85209027?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 			</div>
+		</div><!-- video-->
+
+		<div class="container-fluid section" id="load3">
 			<div class="row" id="project">
-				<div class="col-xs-12"></div>
+				<?php
+                $args = array( 'posts_per_page' => -1, 'category' => 2, 'orderby' => 'title', 'order' => 'ASC');
+                $lastposts = get_posts( $args );
+                foreach ( $lastposts as $post ) :
+                    setup_postdata( $post ); ?>
+                    <div id="image_<?php echo $post_id ?>" class="nopadding col-sm-4 col-md-4 imageWrapper">
+                        <?php echo get_the_post_thumbnail($post_id, 'full', array('class' => 'img-responsive'));?>
+                        <div class="description">
+							<strong>name</strong> <?php print_custom_field('a_name'); ?><br />
+							<strong>age</strong> <?php print_custom_field('b_age'); ?><br />
+							<strong>location</strong> <?php print_custom_field('c_location'); ?><br />
+							<strong>type</strong> <?php print_custom_field('d_type'); ?><br />
+							<strong>extra text</strong> <?php print_custom_field('e_extra'); ?><br />	                        
+                        </div>
+                    </div>
+                <?php endforeach; wp_reset_postdata(); ?>
+                <div class="clarfix"></div>
 			</div>
+		</div><!-- images -->
+
+		<div class="container-fluid section" id="load4">
 			<div class="row" id="about">
-				<div class="col-xs-12"></div>
+					<?php $post_20 = get_post(20); ?>
+					<div class="col-xs-1"></div>
+					<div class="col-xs-2"><h1><?php echo $post_20->post_title; ?></h1></div>
+					<div class="col-xs-1"></div>
+					<?php echo apply_filters('the_content',$post_20->post_content); ?>
+					<div class="col-xs-1"></div>
 			</div>
+		</div><!-- about -->
+		
+		<div class="container-fluid section" id="load5">
 			<div class="row" id="news">
-				<div class="col-xs-12"></div>
 			</div>
+		</div><!-- news-->
+
+		<div class="container-fluid section" id="load6">
 			<div class="row" id="participate">
-				<div class="col-xs-12"></div>
+					<?php $post_22 = get_post(22); ?>
+					<div class="col-xs-1"></div>
+					<div class="col-xs-12 col-sm-2"><h1><?php echo $post_22->post_title; ?></h1></div>
+					<div class="visible-xs clearfix"></div>
+					<div class="col-xs-1"></div>
+					<?php echo apply_filters('the_content',$post_22->post_content); ?>
+					<div class="col-xs-1"></div>
 			</div>
+		</div><!-- participate -->
+		
+		<div class="container-fluid section" id="load7">
 			<div class="row" id="contact">
-				<div class="col-xs-12"></div>
+					<?php $post_24 = get_post(24); ?>
+					<div class="col-xs-1"></div>
+					<div class="col-xs-2"><h1><?php echo $post_24->post_title; ?></h1></div>
+					<div class="col-xs-1"></div>
+					<?php echo apply_filters('the_content',$post_24->post_content); ?>
+					<div class="col-xs-1"></div>
 			</div>
+		</div><!-- contact -->
 
 		</div><!-- #load2 -->
 	

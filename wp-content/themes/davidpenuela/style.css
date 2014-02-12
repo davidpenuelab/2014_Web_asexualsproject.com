@@ -100,20 +100,52 @@ a:active, .active {
 	color:#cf33ca;
 }
 body{
-	padding: 70px 0 0 0;
+	padding: 50px 0 0 0;
 }
-.container-fluid{
+.video{
 	padding: 0px;
+	margin: 0px;
 }
 
 /*****************************************************************/
-/* Global ********************************************************/
+/* HOME **********************************************************/
 /*****************************************************************/
 
-.img_thumb{
-    margin:0px;
-    padding:0px;
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
 }
+.description{
+	
+}
+.imageWrapper {
+    position: relative;
+}
+.imageWrapper img {
+    display: block;
+}
+.imageWrapper .description {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 15px;
+    color: #ffffff;
+    background: #cf33ca;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    
+}
+.imageWrapper:hover .description {
+    opacity: 0.8;
+}
+.section{}
 /*****************************************************************/
 /* Infinite Scroll ***********************************************/
 /*****************************************************************/
