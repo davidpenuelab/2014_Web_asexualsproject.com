@@ -51,7 +51,27 @@
 		</header><!-- #masthead -->
 
 		<div class="container-full" id="load2">
-			
+		
+			<div class="row" id="video">
+				<div class="col-xs-12">
+					 <iframe src="//player.vimeo.com/video/85209027?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="row" id="prject">
+				<div class="col-xs-12"></div>
+			</div>
+			<div class="row" id="about">
+				<div class="col-xs-12"></div>
+			</div>
+			<div class="row" id="news">
+				<div class="col-xs-12"></div>
+			</div>
+			<div class="row" id="participate">
+				<div class="col-xs-12"></div>
+			</div>
+			<div class="row" id="contact">
+				<div class="col-xs-12"></div>
+			</div>
 
 		</div><!-- #load2 -->
 	
