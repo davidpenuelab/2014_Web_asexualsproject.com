@@ -36,7 +36,7 @@
                     </button>
                     <a class="navbar-brand">Asexuals project</a>
                 </div>
-                <div class="collapse navbar-collapse" id="mainMenu">
+                <div class="collapse navbar-collapse custom-collapse" id="mainMenu">
                     <ul id="scrollMenu" class="nav navbar-nav">
                         <li><a class="scroll-link" href="#" data-id="homeVimeo">Home</a></li>
                         <li><a class="scroll-link" href="#" data-id="project">Project</a></li>
