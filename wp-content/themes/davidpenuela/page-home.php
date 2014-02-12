@@ -22,19 +22,14 @@
 	<div class="hfeed site home_container" id="load1">
 		<?php do_action( 'before' ); ?>
 		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</div>
 	        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	            <div class="container-full">
+	            <div class="container-fluid">
 	                <div class="navbar-header">
 	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
 	                    </button>
-	                    <a class="navbar-brand">Asexuals project</a>
 	                </div>
 	                <div class="collapse navbar-collapse custom-collapse" id="mainMenu">
 	                    <ul id="scrollMenu" class="nav navbar-nav">
@@ -50,14 +45,14 @@
 	        </nav>
 		</header><!-- #masthead -->
 
-		<div class="container-full" id="load2">
+		<div class="container-fluid" id="load2">
 		
-			<div class="row" id="video">
+			<div class="row homeVimeo" id="video">
 				<div class="col-xs-12">
 					 <iframe src="//player.vimeo.com/video/85209027?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 			</div>
-			<div class="row" id="prject">
+			<div class="row" id="project">
 				<div class="col-xs-12"></div>
 			</div>
 			<div class="row" id="about">

@@ -1,7 +1,7 @@
 $j = jQuery;
 $j(document).ready(function(){    
     $j('body').scrollspy({ target: '#mainMenu' });
-    $j("#homeVimeo").fitVids();
+    $j(".homeVimeo").fitVids();
     updateResize();
     $j(window).resize(function(){
         updateResize();
@@ -10,7 +10,7 @@ $j(document).ready(function(){
 });
 
 function updateResize(){
-    hideTitlePage();
+/*     hideTitlePage(); */
 }
 
 function hideTitlePage(){
