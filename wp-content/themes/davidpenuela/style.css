@@ -96,17 +96,23 @@ a img {
 /*****************************************************************/
 
 a:hover,
-a:active, .active {
-	color:#cf33ca;
+a:active,
+.active
+li .active > .scroll-link a:link{
+	color: rgb(98,27,128);
+	background: none;
 }
 body{
 	padding: 50px 0 0 0;
+	font-size: 15px;
 }
 .video{
 	padding: 0px;
 	margin: 0px;
 }
-
+.navbar-asexuals{
+	background: white;
+}
 /*****************************************************************/
 /* HOME **********************************************************/
 /*****************************************************************/
@@ -133,7 +139,7 @@ body{
     left: 0px;
     padding: 15px;
     color: #ffffff;
-    background: #cf33ca;
+    background: rgb(98,27,128);
     text-decoration: none;
     text-align: center;
     -webkit-transition: opacity 500ms;
@@ -143,7 +149,7 @@ body{
     
 }
 .imageWrapper:hover .description {
-    opacity: 0.8;
+    opacity: 0.6;
 }
 .section{}
 /*****************************************************************/

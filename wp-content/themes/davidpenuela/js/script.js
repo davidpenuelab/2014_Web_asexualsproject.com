@@ -1,6 +1,7 @@
 $j = jQuery;
 $j(document).ready(function(){    
-    $j('body').scrollspy({ target: '#mainMenu' });
+    $j('.content').scrollspy();
+    
     $j(".homeVimeo").fitVids();
     updateResize();
     $j(window).resize(function(){
@@ -27,6 +28,9 @@ function setupScrollTo(){
 		event.preventDefault();
 		var sectionID = $j(this).attr("data-id");
 		scrollToID('#' + sectionID, 750);
+		$j('.scroll-link').removeClass('active');
+		$j(this).addClass('active');
+		console.log(t);
 	});
 	// scroll to top action
 	$j('.scroll-top').on('click', function(event) {
@@ -51,9 +55,4 @@ function scrollToID(id, speed){
 		mainNav.css("height", "1px").removeClass("in").addClass("collapse");
 		mainNav.removeClass("open");
 	}
-}
-if (typeof console === "undefined") {
-    console = {
-        log: function() { }
-    };
 }
