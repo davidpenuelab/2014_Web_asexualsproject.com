@@ -28,8 +28,8 @@ function setupScrollTo(){
 		event.preventDefault();
 		var sectionID = $j(this).attr("data-id");
 		scrollToID('#' + sectionID, 750);
-		$j('.scroll-link').removeClass('active');
-		$j(this).addClass('active');
+		$j('.scroll-link').parent().removeClass('active');
+		$j(this).parent().addClass('active');
 		console.log(t);
 	});
 	// scroll to top action

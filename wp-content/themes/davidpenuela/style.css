@@ -89,7 +89,7 @@ a img {
 /* FONTS *********************************************************/
 /*****************************************************************/
 
-@font-face {}
+@font-face { font-family: 'Groto'; font-weight:normal; src: url('/fonts/Grot10_Regular.otf'); } 
 
 /*****************************************************************/
 /* Global ********************************************************/
@@ -97,14 +97,13 @@ a img {
 
 a:hover,
 a:active,
-.active
-li .active > .scroll-link a:link{
+.nav>.active>a{
 	color: rgb(98,27,128);
-	background: none;
 }
 body{
 	padding: 50px 0 0 0;
 	font-size: 15px;
+	font-family: 'Groto';
 }
 .video{
 	padding: 0px;
@@ -112,6 +111,10 @@ body{
 }
 .navbar-asexuals{
 	background: white;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+	background: none;
+	text-decoration: underline;
 }
 /*****************************************************************/
 /* HOME **********************************************************/
