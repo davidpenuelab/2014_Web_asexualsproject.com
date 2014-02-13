@@ -94,17 +94,26 @@ a img {
 /*****************************************************************/
 /* Global ********************************************************/
 /*****************************************************************/
-
+a {
+	color: #d8d5d5;
+	text-decoration: none;
+}
+.nav>li>a{
+	padding:15px 15px 15px 0px;
+}
 a:hover,
 a:active,
 .nav>.active>a{
 	color: rgb(98,27,128);
 }
+
 body{
 	padding: 50px 0 0 0;
 	font-size: 15px;
 	font-family: 'Groto';
 }
+h1{ font-size: 40px;}
+p{ font-size: 20px;}
 .video{
 	padding: 0px;
 	margin: 0px;
@@ -115,6 +124,10 @@ body{
 .nav>li>a:hover, .nav>li>a:focus{
 	background: none;
 	text-decoration: underline;
+}
+.navbar-toggle .icon-bar{
+	background: rgb(98,27,128);
+
 }
 /*****************************************************************/
 /* HOME **********************************************************/
@@ -154,7 +167,11 @@ body{
 .imageWrapper:hover .description {
     opacity: 0.6;
 }
-.section{}
+.section{
+	padding-top:60px;
+	padding-bottom:90px;
+	border-bottom: 1px solid gray;
+}
 /*****************************************************************/
 /* Infinite Scroll ***********************************************/
 /*****************************************************************/

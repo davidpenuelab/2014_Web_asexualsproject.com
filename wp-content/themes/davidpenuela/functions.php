@@ -82,6 +82,9 @@ function davidpenuela_scripts() {
 	// dpb
 	//we load first bootstrap 
 	wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri () .'/bootstrap.min.css' );
+	//fancybox
+	wp_enqueue_style( 'fancybox', get_template_directory_uri () .'/js/jquery.fancybox.css' );
+
 	wp_enqueue_style( 'davidpenuela-style', get_stylesheet_uri() );
 	
     wp_enqueue_script( 'jquery' );
@@ -92,6 +95,10 @@ function davidpenuela_scripts() {
     wp_enqueue_script( 'davidpenuela-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
     wp_enqueue_script( 'fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), '1.0.0', true );
+    
+    //fancy box
+    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', array(), '2.1.5', true );
+    wp_enqueue_script( 'fancybox-media', get_template_directory_uri() . '/js/helpers/jquery.fancybox-media.js', array(), '1.0.0', true );
 
     wp_enqueue_script( 'penuela', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

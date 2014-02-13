@@ -8,6 +8,15 @@ $j(document).ready(function(){
         updateResize();
     });
     setupScrollTo();
+    
+	$j('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+
 });
 
 function updateResize(){
@@ -30,7 +39,6 @@ function setupScrollTo(){
 		scrollToID('#' + sectionID, 750);
 		$j('.scroll-link').parent().removeClass('active');
 		$j(this).parent().addClass('active');
-		console.log(t);
 	});
 	// scroll to top action
 	$j('.scroll-top').on('click', function(event) {
