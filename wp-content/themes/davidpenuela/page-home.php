@@ -64,10 +64,10 @@
 	                        <?php echo get_the_post_thumbnail($post_id, 'full', array('class' => 'img-responsive'));?>
 	                        <a class="fancybox-media" href="http://vimeo.com/36031564">
 	                        	<div class="description">
-									<strong>name</strong> <?php print_custom_field('a_name'); ?><br />
-									<strong>age</strong> <?php print_custom_field('b_age'); ?><br />
-									<strong>location</strong> <?php print_custom_field('c_location'); ?><br />
-									<strong>type</strong> <?php print_custom_field('d_type'); ?><br />
+									<?php print_custom_field('a_name'); ?><br />
+									<?php print_custom_field('b_age'); ?><br />
+									<?php print_custom_field('c_location'); ?><br />
+									<?php print_custom_field('d_type'); ?><br />
 								</div>
 	                        </a>
 	                    </div>
