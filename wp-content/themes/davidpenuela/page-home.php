@@ -62,12 +62,15 @@
 	                    setup_postdata( $post ); ?>
 	                    <div id="image_<?php echo $post_id ?>" class="nopadding col-sm-4 col-md-4 imageWrapper">
 	                        <?php echo get_the_post_thumbnail($post_id, 'full', array('class' => 'img-responsive'));?>
-	                        <a class="fancybox-media" href="http://vimeo.com/36031564">
+	                        <a class="<?php if( get_custom_field('has_text')) echo 'fancybox-iframe';
+	                        				else echo 'fancybox-media 	'?>" href="http://vimeo.com/36031564">
 	                        	<div class="description">
-									<?php print_custom_field('a_name'); ?><br />
-									<?php print_custom_field('b_age'); ?><br />
-									<?php print_custom_field('c_location'); ?><br />
-									<?php print_custom_field('d_type'); ?><br />
+									<div class="desc_center"><?php print_custom_field('a_name'); ?></div>
+									<div class="desc_bottom">
+										<?php print_custom_field('b_age'); ?>,
+										<?php print_custom_field('c_location'); ?><br />
+										<?php print_custom_field('d_type'); ?><br />										
+									</div>
 								</div>
 	                        </a>
 	                    </div>

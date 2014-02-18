@@ -1,8 +1,9 @@
 $j = jQuery;
 $j(document).ready(function(){    
-    $j('.content').scrollspy();
-    
     $j(".homeVimeo").fitVids();
+	loadAll();
+
+    $j('.content').scrollspy();
     updateResize();
     $j(window).resize(function(){
         updateResize();
@@ -16,7 +17,9 @@ $j(document).ready(function(){
 			media : {}
 		}
 	});
-
+	$j('.fancybox-iframe').fancybox({
+		
+	});
 });
 
 function updateResize(){
@@ -63,4 +66,14 @@ function scrollToID(id, speed){
 		mainNav.css("height", "1px").removeClass("in").addClass("collapse");
 		mainNav.removeClass("open");
 	}
+}
+
+function loadAll(){
+	$j('#load2').fadeIn(200); // video first
+	setTimeout(function(){$j('#load1').fadeIn(1000)},2500);
+	setTimeout(function(){$j('#load3').fadeIn(1000)},3000);	
+	setTimeout(function(){$j('#load4').fadeIn(1000)},3000);	
+	setTimeout(function(){$j('#load5').fadeIn(1000)},3000);
+	setTimeout(function(){$j('#load6').fadeIn(1000)},3000);	
+	setTimeout(function(){$j('#load7').fadeIn(1000)},3000);		
 }
