@@ -15,10 +15,11 @@ $j(document).ready(function(){
 		closeEffect : 'none',
 		helpers : {
 			media : {}
-		}
+		},
+		padding: 0
 	});
 	$j('.fancybox-iframe').fancybox({
-		
+		padding: 0
 	});
 });
 

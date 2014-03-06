@@ -60,10 +60,16 @@
 	                $lastposts = get_posts( $args );
 	                foreach ( $lastposts as $post ) :
 	                    setup_postdata( $post ); ?>
-	                    <div id="image_<?php echo $post_id ?>" class="nopadding col-sm-4 col-md-4 imageWrapper">
-	                        <?php echo get_the_post_thumbnail($post_id, 'full', array('class' => 'img-responsive'));?>
-	                        <a class="<?php if( get_custom_field('has_text')) echo 'fancybox-iframe';
-	                        				else echo 'fancybox-media 	'?>" href="http://vimeo.com/36031564">
+	                    <div id="image_<?php echo $post->ID; ?>" class="nopadding col-sm-4 col-md-4 imageWrapper">
+	                        <?php echo get_the_post_thumbnail($post_id, 'full', array('class' => 'img-responsive'));
+		                        if(get_custom_field('has_text')){
+			                        echo '<a class="fancybox-iframe" href = "'.get_custom_field("e_text").'">';
+		                        }else{
+			                        echo '<a class="fancybox-media" href = "'.get_custom_field("e_video").'">';
+			                        
+		                        }
+		                        
+	                        ?>
 	                        	<div class="description">
 									<div class="desc_center"><?php print_custom_field('a_name'); ?></div>
 									<div class="desc_bottom">
