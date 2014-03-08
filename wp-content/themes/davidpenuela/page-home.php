@@ -63,7 +63,7 @@
 	                    <div id="image_<?php echo $post->ID; ?>" class="nopadding col-sm-4 col-md-4 imageWrapper">
 	                        <?php echo get_the_post_thumbnail($post_id, 'full', array('class' => 'img-responsive'));
 		                        if(get_custom_field('has_text')){
-			                        echo '<a class="fancybox-iframe" href = "'.get_custom_field("e_text").'">';
+			                        echo '<a class="fancybox-iframe" href = "#'.get_custom_field("a_name").'_'.$post->ID.'">';
 		                        }else{
 			                        echo '<a class="fancybox-media" href = "'.get_custom_field("e_video").'">';
 			                        
@@ -80,6 +80,15 @@
 								</div>
 	                        </a>
 	                    </div>
+	                    <?php  
+	                    	if(get_custom_field('has_text')){
+			                	echo '<div class="interview_box" id="'.get_custom_field("a_name").'_'.$post->ID.'" style="display:none;">';
+				                	echo '<div class="interview_box_inner">'.apply_filters('the_content',get_custom_field("e_text")).'</div><!-- interviewbox-->';
+			                	echo '</div><!-- #hidden_michele-->';
+		                    }else{
+			                    echo '';    
+		                    }
+		                ?>
 	                <?php endforeach; wp_reset_postdata(); ?>
 				</div>
 			</div><!-- images -->

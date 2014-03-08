@@ -13,13 +13,21 @@ $j(document).ready(function(){
 	$j('.fancybox-media').fancybox({
 		openEffect  : 'none',
 		closeEffect : 'none',
+		width		: '100%',
 		helpers : {
 			media : {}
 		},
 		padding: 0
 	});
 	$j('.fancybox-iframe').fancybox({
-		padding: 0
+		fitToView	: false,
+		width		: '100%',
+		height		: 'auto',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+	
 	});
 });
 

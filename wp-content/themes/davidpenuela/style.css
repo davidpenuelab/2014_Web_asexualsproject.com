@@ -181,6 +181,32 @@ p{ font-size: 20px;}
 	font-size: 40px;
 }
 .desc_bottom{}
+
+.interview_box{
+}
+.interview_box_inner	{
+	/* CSS3 */
+	column-count: 2; 
+	column-fill: balance;
+	
+	/* Safari and Chrome */
+	-webkit-column-count: 2;
+	-webkit-column-fill: balance;
+	
+	/* Firefox */
+	-moz-column-count: 2; 
+	-moz-column-fill: balance;
+	
+	/* Internet Explorer */
+	-ms-column-count: 2; 
+	-ms-column-fill: balance;
+	
+	/* Opera */
+	-o-column-count: 2; 
+	-o-column-fill: balance;
+	
+	vertical-align:text-top;
+}
 /*****************************************************************/
 /* Infinite Scroll ***********************************************/
 /*****************************************************************/
@@ -206,7 +232,33 @@ p{ font-size: 20px;}
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { }
+@media (min-width: 768px) { 
+
+	.interview_box_inner	{
+		/* CSS3 */
+		column-count: 3; 
+		column-fill: balance;
+		
+		/* Safari and Chrome */
+		-webkit-column-count: 3;
+		-webkit-column-fill: balance;
+		
+		/* Firefox */
+		-moz-column-count: 3; 
+		-moz-column-fill: balance;
+		
+		/* Internet Explorer */
+		-ms-column-count: 3; 
+		-ms-column-fill: balance;
+		
+		/* Opera */
+		-o-column-count: 3; 
+		-o-column-fill: balance;
+		
+		vertical-align:text-top;
+
+	}
+}
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { }
