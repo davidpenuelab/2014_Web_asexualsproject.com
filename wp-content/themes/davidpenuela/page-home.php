@@ -15,8 +15,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <meta name="description" content='An Asexual is a person "who does not experience sexual attraction". However some of them are able to feel romantic attraction and be in platonic relationships.'>
-<meta name="author" content="David Penuela & Guillemo Brotons">
-<link rel="shortcut icon" href="<?php bloginfo( 'pingback_url' ); ?>/img/favicon.ico">
+<meta name="author" content="David Penuela & Guillermo Brotons">
+<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/img/favicon.ico">
 
 <?php wp_head(); ?>
 </head>
