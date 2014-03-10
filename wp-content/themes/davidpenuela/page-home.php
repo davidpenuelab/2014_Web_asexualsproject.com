@@ -11,9 +11,12 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+<title><?php wp_title( '', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<meta name="description" content='An Asexual is a person "who does not experience sexual attraction". However some of them are able to feel romantic attraction and be in platonic relationships.'>
+<meta name="author" content="David Penuela & Guillemo Brotons">
+<link rel="shortcut icon" href="<?php bloginfo( 'pingback_url' ); ?>/img/favicon.ico">
 
 <?php wp_head(); ?>
 </head>
@@ -102,30 +105,29 @@
 				</div>
 			</div><!-- about -->
 			<div class="clearfix"></div>
-
-			<!--
-<div class="container-fluid section" id="load5">
+			
+			<div class="container-fluid section" id="load5">
 				<div class="row" id="news">
-					<div class="col-xs-12">This is the part of news
-						<p>This is the part of news
-						This is the part of news
-						This is the part of news
-						This is the part of news
-						This is the part of news
-						This is the part of news
-						v
-						v
-						v
-						This is the part of news
-						This is the part of news
-						This is the part of news
-						This is the part of news
-						v
-						This is the part of news</p>
-					</div>
-				</div>
-			</div><!-- news
--->
+					<?php
+	                $get_args = array( 'posts_per_page' => -1, 'category' => 3, 'orderby' => 'title', 'order' => 'ASC');
+	                $allnews = get_posts( $get_args );
+	                foreach ( $allnews as $news ) :
+	                    setup_postdata( $news ); ?>
+	                    <div id="news_<?php echo $news->ID; ?>" class="col-sm-4 col-md-4 newsWrapper">
+	                        <div class="news_date"><?php print_custom_field('a_date'); ?></div>
+	                        <div class="news_description"><?php print_custom_field('b_description'); ?></div>
+	                        <div class="news_link"></div>
+								<div class="desc_center"><?php print_custom_field('a_name'); ?></div>
+								<div class="desc_bottom">
+									<?php print_custom_field('b_age'); ?>,
+									<?php print_custom_field('c_location'); ?><br />
+									<?php print_custom_field('d_type'); ?><br />										
+								</div>
+							</div>
+	                    </div>
+	                <?php endforeach; wp_reset_postdata(); ?>
+				</div><!-- news-->
+			</div><!-- load5-->
 			<div class="container-fluid section" id="load6">
 				<div class="row" id="participate">
 						<?php $post_22 = get_post(22); ?>
