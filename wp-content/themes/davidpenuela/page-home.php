@@ -116,14 +116,7 @@
 	                    <div id="news_<?php echo $news->ID; ?>" class="col-sm-4 col-md-4 newsWrapper">
 	                        <div class="news_date"><?php print_custom_field('a_date'); ?></div>
 	                        <div class="news_description"><?php print_custom_field('b_description'); ?></div>
-	                        <div class="news_link"></div>
-								<div class="desc_center"><?php print_custom_field('a_name'); ?></div>
-								<div class="desc_bottom">
-									<?php print_custom_field('b_age'); ?>,
-									<?php print_custom_field('c_location'); ?><br />
-									<?php print_custom_field('d_type'); ?><br />										
-								</div>
-							</div>
+	                        <div class="news_link"><?php print_custom_field('c_link:to_link','Watch'); ?></div>
 	                    </div>
 	                <?php endforeach; wp_reset_postdata(); ?>
 				</div><!-- news-->
