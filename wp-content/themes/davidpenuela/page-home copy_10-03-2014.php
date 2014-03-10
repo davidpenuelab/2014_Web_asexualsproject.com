@@ -121,21 +121,6 @@
 	                <?php endforeach; wp_reset_postdata(); ?>
 				</div><!-- news-->
 			</div><!-- load5-->
-			<div class="container-fluid section" id="load7">
-				<div class="row" id="news">
-					<?php
-	                $get_args = array( 'posts_per_page' => -1, 'category' => '3', 'orderby' => 'title', 'order' => 'ASC');
-	                $allnews = get_posts( $get_args );
-	                foreach ( $allnews as $post ) :
-	                    setup_postdata( $post ); ?>
-	                    <div id="news_<?php echo $post->ID; ?>" class="col-sm-4 col-md-4 newsWrapper">
-	                        <div class="news_date"><?php print_custom_field('n_a_date'); ?></div>
-	                        <div class="news_description"><?php print_custom_field('n_b_description'); ?></div>
-	                        <div class="news_link"><?php print_custom_field('n_c_link:to_link','Watch'); ?></div>
-	                    </div>
-	                <?php endforeach; wp_reset_postdata(); ?>
-				</div><!-- news-->
-			</div><!-- load5-->
 			<div class="container-fluid section" id="load6">
 				<div class="row" id="participate">
 						<?php $post_22 = get_post(22); ?>
