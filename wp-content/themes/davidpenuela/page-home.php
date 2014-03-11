@@ -123,17 +123,62 @@
 			</div><!-- load5-->
 			<div class="container-fluid section" id="load7">
 				<div class="row" id="news">
-					<?php
-	                $get_args = array( 'posts_per_page' => -1, 'category' => '3', 'orderby' => 'title', 'order' => 'ASC');
-	                $allnews = get_posts( $get_args );
-	                foreach ( $allnews as $post ) :
-	                    setup_postdata( $post ); ?>
-	                    <div id="news_<?php echo $post->ID; ?>" class="col-sm-4 col-md-4 newsWrapper">
-	                        <div class="news_date"><?php print_custom_field('n_a_date'); ?></div>
-	                        <div class="news_description"><?php print_custom_field('n_b_description'); ?></div>
-	                        <div class="news_link"><?php print_custom_field('n_c_link:to_link','Watch'); ?></div>
-	                    </div>
-	                <?php endforeach; wp_reset_postdata(); ?>
+					<div id="asex_news_carousel" class="carousel slide">					                
+						<!-- Carousel items -->
+		                <div class="carousel-inner">
+			                <?php
+				                $get_args = array( 'posts_per_page' => -1, 'category' => '3', 'orderby' => 'title', 'order' => 'ASC');
+				                $allnews = get_posts( $get_args );
+				                $counter = 0;
+				                $firstTime = true;
+				                foreach ( $allnews as $post ) :
+					                setup_postdata( $post );
+				                	if($counter%2 == 0){
+				                		if($firstTime == true){
+						                	echo '<div class="item active"><div class="row">';					                		
+				                		}else{
+					                		echo '<div class="item"><div class="row">';
+				                		}
+				                	}
+				                	if($counter%2+1==3){
+					                	echo '</div><!--/row--></div><!--item-->'
+				                	}
+				                     ?>
+				                    <div id="news_<?php echo $post->ID; ?>" class="col-sm-4 col-md-4 newsWrapper">
+				                        <div class="news_date"><?php print_custom_field('n_a_date'); ?></div>
+				                        <div class="news_description"><?php print_custom_field('n_b_description'); ?></div>
+				                        <div class="news_link"><?php print_custom_field('n_c_link:to_link','Watch'); ?></div>
+				                    </div>
+							<?php endforeach; wp_reset_postdata(); ?>
+		                    <div class="item active">
+		                        <div class="row">
+		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                        </div>
+		                        <!--/row-->
+		                    </div>
+		                    <!--/item-->
+		                    <div class="item">
+		                        <div class="row">
+		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+		                            </div>
+		                        </div>
+		                        <!--/row-->
+		                    </div>
+		                    <!--/item-->
+		                </div><!--/carousel-inner--> 
+		                <a class="left carousel-control" href="#asex_news_carousel" data-slide="prev">?</a>
+		                <a class="right carousel-control" href="#asex_news_carousel" data-slide="next">?</a>
+		            </div>
+		            <!--/myCarousel-->
 				</div><!-- news-->
 			</div><!-- load5-->
 			<div class="container-fluid section" id="load6">
