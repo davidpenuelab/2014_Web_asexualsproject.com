@@ -3,7 +3,7 @@ $j(document).ready(function(){
     $j(".homeVimeo").fitVids();
 	loadAll();
 
-    $j('.content').scrollspy();
+    $j('.content').scrollspy({ target: '#spyme' });
     updateResize();
     $j(window).resize(function(){
         updateResize();
@@ -29,6 +29,14 @@ $j(document).ready(function(){
 		closeEffect	: 'none',
 	
 	});
+	
+	$j('.content').on('activate.bs.scrollspy', function () {
+		// do something?
+		console.log("hello");
+  	});
+  	
+  	
+  	
 });
 
 function updateResize(){
@@ -85,4 +93,5 @@ function loadAll(){
 	setTimeout(function(){$j('#load5').fadeIn(1000)},3000);
 	setTimeout(function(){$j('#load6').fadeIn(1000)},3000);	
 	setTimeout(function(){$j('#load7').fadeIn(1000)},3000);		
+	setTimeout(function(){$j('#load8').fadeIn(1000)},3000);		
 }

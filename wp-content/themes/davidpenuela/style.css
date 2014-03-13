@@ -131,7 +131,21 @@ p{ font-size: 20px;}
 }
 #load0,#load1,#load2,#load3,#load4,#load5,#load6,#load7{
 	display: none;
-} 
+}
+
+.icon-facebook, .icon-facebook:hover,
+.icon-instagram, .icon-instagram:hover,
+.icon-twitter, .icon-twitter:hover{ 
+  background-position: center center; 
+  height: 22px; 
+  width: 22px;
+}
+.icon-facebook:hover {  background-image: url("img/icons/fb-hoover.png");}
+.icon-facebook {  background-image: url("img/icons/fb.png");} 
+.icon-instagram:hover {   background-image: url("img/icons/inst-hoover.png");}
+.icon-instagram {  background-image: url("img/icons/inst.png");} 
+.icon-twitter:hover {  background-image: url("img/icons/twtr-hoover.png");}
+.icon-twitter {  background-image: url("img/icons/twtr.png");} 
 /*****************************************************************/
 /* HOME **********************************************************/
 /*****************************************************************/

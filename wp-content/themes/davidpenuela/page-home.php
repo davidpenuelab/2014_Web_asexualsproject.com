@@ -6,8 +6,9 @@
  *
  * @package davidpenuela
  */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,14 +22,14 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-spy="scroll" data-target="#mainMenu">
+<body <?php body_class(); ?> >
 	<div class="hfeed site home_container" id="load1">
 		<?php do_action( 'before' ); ?>
 		<header id="masthead" class="site-header" role="banner">
-	        <nav class="navbar navbar-asexuals navbar-fixed-top" role="navigation">
+	        <nav class="navbar navbar-asexuals navbar-fixed-top" id="spyme" role="navigation">
 	            <div class="container-fluid">
 	                <div class="navbar-header">
-	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".asexuals-collapse">
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
@@ -36,14 +37,19 @@
 	                </div>
 	                <div class="collapse navbar-collapse asexuals-collapse" id="mainMenu">
 	                    <ul id="scrollMenu" class="nav navbar-nav">
-	                        <li><a class="scroll-link" href="#video" data-id="video">Home</a></li>
-	                        <li><a class="scroll-link" href="#project" data-id="project">Project</a></li>
-	                        <li><a class="scroll-link" href="#about" data-id="about">About</a></li>
-<!-- 	                        <li><a class="scroll-link" href="#news" data-id="news">News</a></li> -->
-	                        <li><a class="scroll-link" href="#participate" data-id="participate">Participate</a></li>
-	                        <li><a class="scroll-link" href="#contact" data-id="contact">Contact</a></li>
+	                        <li class=""><a class="scroll-link" href="#video" data-id="video">Home</a></li>
+	                        <li class=""><a class="scroll-link" href="#project" data-id="project">Project</a></li>
+	                        <li class=""><a class="scroll-link" href="#about" data-id="about">About</a></li>
+	                        <li class=""><a class="scroll-link" href="#news" data-id="news">News</a></li>
+	                        <li class=""><a class="scroll-link" href="#participate" data-id="participate">Participate</a></li>
+	                        <li class=""><a class="scroll-link" href="#contact" data-id="contact">Contact</a></li>
 	                    </ul>
-	                  </div><!--/.nav-collapse -->
+	                    <ul class="nav navbar-nav navbar-right">
+	                        <li><a href="http://facebook.com"><div class="icon icon-facebook"></div></a></li>
+	                        <li><a href="http://instagram.com"><div class="icon icon-instagram"></div></a></li>
+	                        <li><a href="http://twitter.com"><div class="icon icon-twitter"></div></a></li>
+	                    </ul>
+	                </div><!--/.nav-collapse -->
 	            </div>        
 	        </nav>
 		</header><!-- #masthead -->
@@ -104,26 +110,10 @@
 						<?php echo apply_filters('the_content',$post_20->post_content); ?>
 				</div>
 			</div><!-- about -->
-			<div class="clearfix"></div>
-			
-			<div class="container-fluid section" id="load5">
+			<div class="clearfix"></div>			
+			<div class="container-fluid section" id="load6">
 				<div class="row" id="news">
-					<?php
-	                $get_args = array( 'posts_per_page' => -1, 'category' => '3', 'orderby' => 'title', 'order' => 'ASC');
-	                $allnews = get_posts( $get_args );
-	                foreach ( $allnews as $post ) :
-	                    setup_postdata( $post ); ?>
-	                    <div id="news_<?php echo $post->ID; ?>" class="col-sm-4 col-md-4 newsWrapper">
-	                        <div class="news_date"><?php print_custom_field('n_a_date'); ?></div>
-	                        <div class="news_description"><?php print_custom_field('n_b_description'); ?></div>
-	                        <div class="news_link"><?php print_custom_field('n_c_link:to_link','Watch'); ?></div>
-	                    </div>
-	                <?php endforeach; wp_reset_postdata(); ?>
-				</div><!-- news-->
-			</div><!-- load5-->
-			<div class="container-fluid section" id="load7">
-				<div class="row" id="news">
-					<div id="asex_news_carousel" class="carousel slide">					                
+					<div id="asex_news_carousel" class="carousel slide col-xs-12">					                
 						<!-- Carousel items -->
 		                <div class="carousel-inner">
 			                <?php
@@ -133,47 +123,28 @@
 				                $firstTime = true;
 				                foreach ( $allnews as $post ) :
 					                setup_postdata( $post );
-				                	if($counter%2 == 0){
+				                	if($counter%3 == 0){
 				                		if($firstTime == true){
-						                	echo '<div class="item active"><div class="row">';					                		
-				                		}else{
-					                		echo '<div class="item"><div class="row">';
-				                		}
+				                			$firstTime = false;
+						                	echo '<div class="item active">
+						                			<div class="row">';
+						                }else{
+						                	echo '<div class="item">
+						                			<div class="row">';							                
+						                }				                		
 				                	}
-				                	if($counter%2+1==3){
-					                	echo '</div><!--/row--></div><!--item-->'
+					                echo '<div id="news_'.$post->ID.'" class="col-sm-4 col-md-4 newsWrapper">';
+					                	echo '<div class="news_date">'.print_custom_field('n_a_date').'</div>';
+										echo '<div class="news_description">'.print_custom_field('n_b_description').'</div>';
+										echo '<div class="news_link"><a href="'.print_custom_field('n_c_link:to_link_href').'">Watch</a></div>';
+									echo '</div><!--/col-sm-4 -->';
+
+					                if(($counter%3) == 2){
+				                		echo '</div><!--/row--></div><!--item-->';
 				                	}
-				                     ?>
-				                    <div id="news_<?php echo $post->ID; ?>" class="col-sm-4 col-md-4 newsWrapper">
-				                        <div class="news_date"><?php print_custom_field('n_a_date'); ?></div>
-				                        <div class="news_description"><?php print_custom_field('n_b_description'); ?></div>
-				                        <div class="news_link"><?php print_custom_field('n_c_link:to_link','Watch'); ?></div>
-				                    </div>
-							<?php endforeach; wp_reset_postdata(); ?>
-		                    <div class="item active">
-		                        <div class="row">
-		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                        </div>
-		                        <!--/row-->
-		                    </div>
-		                    <!--/item-->
-		                    <div class="item">
-		                        <div class="row">
-		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                            <div class="col-sm-4"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-		                            </div>
-		                        </div>
-		                        <!--/row-->
-		                    </div>
-		                    <!--/item-->
+									$counter++;
+								endforeach; 
+							wp_reset_postdata(); ?>
 		                </div><!--/carousel-inner--> 
 		                <a class="left carousel-control" href="#asex_news_carousel" data-slide="prev">?</a>
 		                <a class="right carousel-control" href="#asex_news_carousel" data-slide="next">?</a>
@@ -181,7 +152,7 @@
 		            <!--/myCarousel-->
 				</div><!-- news-->
 			</div><!-- load5-->
-			<div class="container-fluid section" id="load6">
+			<div class="container-fluid section" id="load7">
 				<div class="row" id="participate">
 						<?php $post_22 = get_post(22); ?>
 						<div class="col-xs-12 col-sm-3"><h1><?php echo $post_22->post_title; ?></h1></div>
@@ -190,7 +161,7 @@
 				</div>
 			</div><!-- participate -->
 
-			<div class="container-fluid section" id="load7">
+			<div class="container-fluid section" id="load8">
 				<div class="row" id="contact">
 						<?php $post_24 = get_post(24); ?>
 						<div class="col-xs-12 col-sm-3"><h1><?php echo $post_24->post_title; ?></h1></div>
