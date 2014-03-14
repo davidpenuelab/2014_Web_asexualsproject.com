@@ -35,6 +35,35 @@ $j(document).ready(function(){
 		console.log("hello");
   	});
   	
+  	$j(document).keypress(function( event ) {
+  		switch (event.which){
+	  		//black
+	  		case 98:
+	  		case 66:
+	  			$j('.about').css('background','black');
+	  			$j('.about p').css('color','white');
+	  			$j('.about h1').css('color','white');
+	  		break;
+	  		//white
+	  		case 119:	  		
+	  		case 87:
+	  			$j('.about').css('background','white');
+	  			$j('.about p').css('color','black');
+	  			$j('.about h1').css('color','black');
+	  		break;
+	  		//purple
+	  		case 112:
+	  		case 80:
+	  			$j('.about').css('background','rgb(100,10,134)');
+	  			$j('.about p').css('color','white');
+	  			$j('.about h1').css('color','white');	  			
+	  		break;
+
+	  		default:
+	  		break;
+  		} 
+
+	});
   	
   	
 });
@@ -94,4 +123,6 @@ function loadAll(){
 	setTimeout(function(){$j('#load6').fadeIn(1000)},3000);	
 	setTimeout(function(){$j('#load7').fadeIn(1000)},3000);		
 	setTimeout(function(){$j('#load8').fadeIn(1000)},3000);		
+	setTimeout(function(){$j('#load9').fadeIn(1000)},3000);		
+	setTimeout(function(){$j('#load10').fadeIn(1000)},3000);		
 }
