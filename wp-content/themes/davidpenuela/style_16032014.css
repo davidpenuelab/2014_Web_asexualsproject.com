@@ -1,0 +1,353 @@
+/*
+Theme Name: davidpenuela
+Theme URI: http://underscores.me/
+Author: David Penuela
+Author URI: http://davidpenuela.com
+Description: Asexualsproject
+*/
+
+
+/*****************************************************************/
+/* FONTS *********************************************************/
+/*****************************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+/*****************************************************************/
+/* FONTS *********************************************************/
+/*****************************************************************/
+
+@font-face { font-family: 'Groto'; font-weight:normal; src: url('/fonts/Grot10_Regular.otf'); } 
+
+/*****************************************************************/
+/* Global ********************************************************/
+/*****************************************************************/
+a {
+	color: #d1caca;
+	text-decoration: none;
+}
+.nav>li>a{
+	padding:15px 15px 15px 0px;
+}
+a:hover,
+a:active,
+.nav>.active>a{
+	color: rgb(100,10,134);
+}
+
+body{
+	padding: 50px 0 0 0;
+	font-size: 15px;
+	font-family: 'Groto';
+}
+h1{ font-size: 40px;}
+p{ font-size: 20px;}
+.video{
+	padding: 0px;
+	margin: 0px;
+}
+.navbar-asexuals{
+	background: white;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+	background: none;
+	text-decoration: underline;
+}
+.navbar-toggle .icon-bar{
+	background: rgb(98,27,128);
+
+}
+#load0,#load1,#load2,#load3,#load4,#load5,#load6,#load7,#load8,#load9,#load10{
+	display: none;
+}
+
+h1{
+	margin-bottom: 60px;
+}
+h1.imAsexual{
+	margin-bottom: 50px;
+}
+.content p{
+	font-size: 16px;
+}
+.content a{
+	color: rgb(100,10,134);
+}
+.content a:hover{
+	text-decoration: underline;
+}
+/*****************************************************************/
+/* HOME **********************************************************/
+/*****************************************************************/
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.description{
+	
+}
+.imageWrapper {
+    position: relative;
+}
+.imageWrapper img {
+    display: block;
+}
+.imageWrapper .description{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 15px;
+    color: #ffffff;
+    background: rgb(98,27,128);
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    
+}
+.imageWrapper .description2 {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    
+}
+.imageWrapper:hover .description {
+    opacity: 0.6;
+}
+.imageWrapper:hover .description2 {
+    opacity: 1;
+}
+.section{
+}
+.innerSection{
+	margin-top:60px;
+	margin-bottom:90px;
+}
+.desc_center{
+	margin: 40% auto 30% auto;
+	font-size: 40px;
+}
+.desc_bottom{}
+
+.interview_box{
+}
+.interview_box_inner	{
+	/* CSS3 */
+	column-count: 2; 
+	column-fill: balance;
+	
+	/* Safari and Chrome */
+	-webkit-column-count: 2;
+	-webkit-column-fill: balance;
+	
+	/* Firefox */
+	-moz-column-count: 2; 
+	-moz-column-fill: balance;
+	
+	/* Internet Explorer */
+	-ms-column-count: 2; 
+	-ms-column-fill: balance;
+	
+	/* Opera */
+	-o-column-count: 2; 
+	-o-column-fill: balance;
+	
+	vertical-align:text-top;
+}
+
+.newsWrapper{
+	margin-bottom: 20px;
+}
+.news_date{}
+.news_description{}
+.news_link{}
+
+
+#asex_news_carousel{}
+.divider{
+	border: none;
+	border-bottom: 1px solid gray;
+	margin: 0 15px;
+}
+
+.icon-facebook { display:block; width: 22px; height: 22px; background-image: url("img/icons/fb_both.png");} 
+.icon-instagram { display:block;width: 22px; height: 22px; background-image: url("img/icons/inst_both.png");} 
+.icon-twitter { display:block;width: 22px; height: 22px; background-image: url("img/icons/twtr_both.png");}
+
+.icon-facebook:hover,
+.icon-instagram:hover,
+.icon-twitter:hover{ 
+  background-position: 22px 0; 	
+}
+
+.icon-arrowRight{
+	display:block; width: 12px; height: 22px; background-image: url("img/icons/arrowRight_both.png");
+	float:right;
+	margin-top: -40px;
+	margin-right: 20px;
+}
+.icon-arrowRight:hover{
+	background-position: 12px 0;
+}
+.carousel-control.left, .carousel-control.right{
+	background: none;
+
+}
+.contact_margin{
+	margin-bottom: 50px;
+}
+#footer{
+	background: gray;
+	color: white;
+	
+}
+/*****************************************************************/
+/* Infinite Scroll ***********************************************/
+/*****************************************************************/
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+
+
+/*****************************************************************/
+/* MEDIA QUERIES *************************************************/
+/*****************************************************************/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+	.interview_box_inner	{
+		/* CSS3 */
+		column-count: 3; 
+		column-fill: balance;
+		
+		/* Safari and Chrome */
+		-webkit-column-count: 3;
+		-webkit-column-fill: balance;
+		
+		/* Firefox */
+		-moz-column-count: 3; 
+		-moz-column-fill: balance;
+		
+		/* Internet Explorer */
+		-ms-column-count: 3; 
+		-ms-column-fill: balance;
+		
+		/* Opera */
+		-o-column-count: 3; 
+		-o-column-fill: balance;
+		
+		vertical-align:text-top;
+
+	}
+	.newsWrapper{
+		margin-bottom: 0px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
