@@ -9,6 +9,9 @@ $j(document).ready(function(){
         updateResize();
     });
     setupScrollTo();
+    $j('#asex_news_carousel').carousel({
+		interval: false
+  	});
     
 	$j('.fancybox-media').fancybox({
 		openEffect  : 'none',

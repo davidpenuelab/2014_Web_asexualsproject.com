@@ -37,8 +37,8 @@
 	                </div>
 	                <div class="collapse navbar-collapse asexuals-collapse" id="mainMenu">
 	                    <ul id="scrollMenu" class="nav navbar-nav">
-	                        <li class=""><a class="scroll-link" href="#video" data-id="video">TEASER</a></li>
-	                        <li class=""><a class="scroll-link" href="#project" data-id="project">ASEXUALS PROJECT</a></li>
+	                        <li class=""><a class="scroll-link" href="#video" data-id="video">Teaser</a></li>
+	                        <li class=""><a class="scroll-link" href="#project" data-id="project">Asexuals Project</a></li>
 	                        <li class=""><a class="scroll-link" href="#about" data-id="about">About</a></li>
 	                        <li class=""><a class="scroll-link" href="#news" data-id="news">News</a></li>
 	                        <li class=""><a class="scroll-link" href="#participate" data-id="participate">Participate</a></li>
