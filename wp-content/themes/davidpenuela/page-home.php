@@ -45,9 +45,9 @@
 	                        <li class=""><a class="scroll-link" href="#contact" data-id="contact">Contact</a></li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
-	                        <li><a href="http://facebook.com"><div class="icon icon-facebook"></div></a></li>
-	                        <li><a href="http://instagram.com"><div class="icon icon-instagram"></div></a></li>
-	                        <li><a href="http://twitter.com"><div class="icon icon-twitter"></div></a></li>
+	                        <li><a href="https://www.facebook.com/asexproject"><div class="icon icon-facebook"></div></a></li>
+	                        <li><a href="http://instagram.com/laia_abril"><div class="icon icon-instagram"></div></a></li>
+	                        <li><a href="https://twitter.com/laiaabril"><div class="icon icon-twitter"></div></a></li>
 	                    </ul>
 	                </div><!--/.nav-collapse -->
 	            </div>        
