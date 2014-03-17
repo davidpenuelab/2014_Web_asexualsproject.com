@@ -22,10 +22,10 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
-	<div class="hfeed site home_container" id="load1">
+<body <?php body_class(); ?> data-spy="scroll" data-target="#mainMenu" data-offset="80">
+	<div class="hfeed site home_container">
 		<?php do_action( 'before' ); ?>
-		<header id="masthead" class="site-header" role="banner">
+		<header id="load1" class="site-header" role="banner">
 	        <nav class="navbar navbar-asexuals navbar-fixed-top" id="spyme" role="navigation">
 	            <div class="container-fluid">
 	                <div class="navbar-header">
@@ -37,7 +37,7 @@
 	                </div>
 	                <div class="collapse navbar-collapse asexuals-collapse" id="mainMenu">
 	                    <ul id="scrollMenu" class="nav navbar-nav">
-	                        <li class=""><a class="scroll-link" href="#video" data-id="video">Teaser</a></li>
+	                        <li class="active"><a class="scroll-link" href="#video" data-id="video">Teaser</a></li>
 	                        <li class=""><a class="scroll-link" href="#project" data-id="project">Asexuals Project</a></li>
 	                        <li class=""><a class="scroll-link" href="#about" data-id="about">About</a></li>
 	                        <li class=""><a class="scroll-link" href="#news" data-id="news">News</a></li>
