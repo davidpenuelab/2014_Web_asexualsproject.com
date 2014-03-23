@@ -99,17 +99,17 @@ a {
 	text-decoration: none;
 }
 .nav>li>a{
-	padding:15px 15px 15px 0px;
+	padding:15px 25px 15px 0px;
 }
 a:hover,
 a:active,
 .nav>.active>a{
-	color: rgb(100,10,134);
+	color: rgb(101,10,134);
 }
 
 body{
 	padding: 50px 0 0 0;
-	font-size: 15px;
+	font-size: 16px;
 	font-family: 'Groto';
 }
 h1{ font-size: 40px;}
@@ -129,15 +129,21 @@ p{ font-size: 20px;}
 	background: rgb(98,27,128);
 
 }
-#load0,#load1,#load3,#load4,#load5,#load6,#load7,#load8,#load9,#load10{
-	display: none;
+#scrollMenu{
+	margin-left: 10px;
+}
+#load0,#load3,#load4,#load5,#load6,#load7,#load8,#load9,#load10{
+/* 	display: none; */
 }
 
 h1{
-	margin-bottom: 60px;
+	margin-bottom: 45px;
 }
 h1.imAsexual{
 	margin-bottom: 50px;
+}
+h2{
+	margin-bottom: 20px;
 }
 .content p{
 	font-size: 16px;
@@ -147,6 +153,10 @@ h1.imAsexual{
 }
 .content a:hover{
 	text-decoration: underline;
+}
+.container-980{
+	margin: 0 auto;
+	max-width: 980px;
 }
 /*****************************************************************/
 /* HOME **********************************************************/
@@ -206,20 +216,20 @@ h1.imAsexual{
 .imageWrapper:hover .description2 {
     opacity: 1;
 }
-.section{
-}
+.section{}
+
 .innerSection{
 	margin-top:60px;
 	margin-bottom:90px;
 }
 .desc_center{
-	margin: 40% auto 30% auto;
+	margin: 30% auto 20% auto;
 	font-size: 40px;
 }
 .desc_bottom{}
 
-.interview_box{
-}
+.interview_box{}
+
 .interview_box_inner	{
 	/* CSS3 */
 	column-count: 2; 
@@ -243,11 +253,15 @@ h1.imAsexual{
 	
 	vertical-align:text-top;
 }
-
+#about p{
+	font-size: 21px;
+}
 .newsWrapper{
 	margin-bottom: 20px;
 }
-.news_date{}
+.news_date, .news_description{
+	margin-bottom: 20px;
+}
 .news_description{}
 .news_link{}
 
@@ -256,7 +270,7 @@ h1.imAsexual{
 .divider{
 	border: none;
 	border-bottom: 1px solid gray;
-	margin: 0 15px;
+	margin: 0px;
 }
 
 .icon-facebook { display:block; width: 22px; height: 22px; background-image: url("img/icons/fb_both.png");} 
@@ -285,10 +299,21 @@ h1.imAsexual{
 .contact_margin{
 	margin-bottom: 50px;
 }
-#footer{
+
+#team{
+	margin-bottom: 70px;
+}
+.footer{
 	background: gray;
 	color: white;
-	
+	padding: 10px 0;
+	font-size: 10px;	
+}
+.credit{
+	text-align: right;
+}
+.credit a{
+	color: white;
 }
 /*****************************************************************/
 /* Infinite Scroll ***********************************************/
@@ -347,7 +372,15 @@ h1.imAsexual{
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { }
+@media (min-width: 992px) {
+	.desc_center{
+		margin: 35% auto 25% auto;
+	}
+}
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) {
+	.desc_center{
+		margin: 40% auto 30% auto;
+	}
+}

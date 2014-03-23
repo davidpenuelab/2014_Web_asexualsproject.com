@@ -12,7 +12,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '', true, 'right' ); ?></title>
+<title>Asexuals Project by Laia Abril</title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <meta name="description" content='An Asexual is a person "who does not experience sexual attraction". However some of them are able to feel romantic attraction and be in platonic relationships.'>
@@ -53,6 +53,7 @@
 	            </div>        
 	        </nav>
 		</header><!-- #masthead -->
+		<div class="clearfix"></div>		
 		<div class="content">
 			<div class="container-fluid" id="load2">
 				<div class="row homeVimeo" id="video">
@@ -102,18 +103,18 @@
 	                <?php endforeach; wp_reset_postdata(); ?>
 				</div>
 			</div><!-- images -->
-			<div class="container-fluid section about" id="load4">
+			<div class="container-980 section about" id="load4">
 				<div class="row innerSection" id="about">
 						<?php $post_20 = get_post(20); ?>
 						<div class="col-xs-12 col-sm-3"><h1><?php echo $post_20->post_title; ?></h1></div>
 						<div class="clearfix visible-xs"></div>
 						<?php echo apply_filters('the_content',$post_20->post_content); ?>
 				</div>
-			</div><!-- about -->
 			<hr class="divider">
-			<div class="container-fluid section" id="load6">
+			</div><!-- about -->
+			<div class="container-980 section" id="load6">
 				<div class="row innerSection" id="news">
-					<div class="col-xs-12 col-sm-3"><h1>NEWS</h1></div>
+					<div class="col-xs-12 col-sm-3"><h1>News</h1></div>
 					<div class="clearfix visible-xs"></div>
 					<div id="asex_news_carousel" class="carousel slide col-xs-12">					                
 						<!-- Carousel items -->
@@ -158,36 +159,39 @@
 		            </div>
 		            <!--/myCarousel-->
 				</div><!-- news-->
+				<hr class="divider">
 			</div><!-- load5-->
-			<hr class="divider">
-			<div class="container-fluid section" id="load7">
+			<div class="container-980 section" id="load7">
 				<div class="row innerSection" id="participate">
 						<?php $post_22 = get_post(22); ?>
 						<div class="col-xs-12 col-sm-3"><h1><?php echo $post_22->post_title; ?></h1></div>
 						<div class="visible-xs clearfix"></div>
 						<?php echo apply_filters('the_content',$post_22->post_content); ?>
 				</div>
+				<hr class="divider">
 			</div><!-- participate -->
-			<hr class="divider">
-			<div class="container-fluid section" id="load8">
+			<div class="container-980 section" id="load8">
 				<div class="row innerSection" id="contact">
 						<?php $post_24 = get_post(24); ?>
 						<div class="col-xs-12"><h1><?php echo $post_24->post_title; ?></h1></div>
 						<?php echo apply_filters('the_content',$post_24->post_content); ?>
 				</div>
+				<hr class="divider">
 			</div><!-- contact -->
-			<hr class="divider">
-			<div class="container-fluid section" id="load9">
+			<div class="container-980 section" id="load9">
 				<div class="row innerSection" id="team">
 						<?php $post_107 = get_post(107); ?>
+						<div class="col-xs-12"><h1><?php echo $post_107->post_title; ?></h1></div>
 						<?php echo apply_filters('the_content',$post_107->post_content); ?>
 				</div>
 			</div><!-- contact -->
-			<div class="container-fluid section" id="load10">
-				<div class="row" id="footer">
+			<div class="section footer" id="load10">
+				<div class="container-980">
+					<div class="row">
 						<div class="col-xs-12 col-sm-3">Copyright  Laia Abril 2014</div>
 						<div class="col-xs-12 col-sm-6"></div>
-						<div class="col-xs-12 col-sm-3">Site by Guille + Penu</div>
+						<div class="col-xs-12 col-sm-3 credit">Site by <a href="http://guillermobrotons.net/">Guille</a> + <a href="http://davidpenuela.com">Penu</a></div>
+					</div>					
 				</div>
 			</div><!-- contact -->
 		</div><!-- content so i can scrollspy-->

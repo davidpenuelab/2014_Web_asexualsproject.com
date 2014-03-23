@@ -5,7 +5,7 @@ $j(document).ready(function(){
     $j(".homeVimeo").fitVids();
 	
 	//fadein of the elements
-	loadAll();
+	//loadAll();
 	
 	//setup FancyBox
 	setupFancyBox();    
@@ -24,9 +24,10 @@ $j(document).ready(function(){
     
 
 	//extra
-	$j('.content').on('activate.bs.scrollspy', function () {
+	$j('body').on('activate.bs.scrollspy', function () {
 		// do something?
-		console.log("hello");
+/* 		console.log("hello"); */
+		
   	});
   	
   	$j(document).keypress(function( event ) {
@@ -60,8 +61,7 @@ $j(document).ready(function(){
 	});
   	
   	addAnalytics();
-  	
-});
+ });
 
 function updateResize(){}
 
@@ -121,8 +121,6 @@ function scrollToID(id, speed){
 }
 
 function loadAll(){
-	$j('#load1').fadeIn(800); // video first
-	setTimeout(function(){$j('#load1').fadeIn(1000)},1000);
 	setTimeout(function(){$j('#load3').fadeIn(1000)},1000);	
 	setTimeout(function(){$j('#load4').fadeIn(1000)},1000);	
 	setTimeout(function(){$j('#load5').fadeIn(1000)},1000);
