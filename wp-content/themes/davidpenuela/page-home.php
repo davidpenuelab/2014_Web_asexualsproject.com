@@ -43,6 +43,7 @@
 	                        <li class=""><a class="scroll-link" href="#news" data-id="news">News</a></li>
 	                        <li class=""><a class="scroll-link" href="#participate" data-id="participate">Participate</a></li>
 	                        <li class=""><a class="scroll-link" href="#contact" data-id="contact">Contact</a></li>
+	                        <li class=""><a class="scroll-link" href="#credits" data-id="contact">Credits</a></li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <li><a href="https://www.facebook.com/asexproject"><div class="icon icon-facebook"></div></a></li>
@@ -139,7 +140,7 @@
 					                echo '<div id="news_'.$post->ID.'" class="col-sm-4 col-md-4 newsWrapper">';
 					                	echo '<div class="news_date">'.get_custom_field('n_a_date').'</div>';
 										echo '<div class="news_description">'.get_custom_field('n_b_description').'</div>';
-										echo '<div class="news_link"><a href="'.get_custom_field('n_c_link').'" target="_blank">VIEW</a></div>';
+										echo '<div class="news_link"><a href="'.get_custom_field('n_c_link').'" target="_blank">View</a></div>';
 									echo '</div><!--/col-sm-4 -->';
 									
 									if( ($counter%3) === 2) {// si es final, añade row
@@ -179,7 +180,7 @@
 				<hr class="divider">
 			</div><!-- contact -->
 			<div class="container-980 section" id="load9">
-				<div class="row innerSection" id="team">
+				<div class="row innerSection" id="credits">
 						<?php $post_107 = get_post(107); ?>
 						<div class="col-xs-12"><h1><?php echo $post_107->post_title; ?></h1></div>
 						<?php echo apply_filters('the_content',$post_107->post_content); ?>

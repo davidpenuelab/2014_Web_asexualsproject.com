@@ -105,6 +105,7 @@ a:hover,
 a:active,
 .nav>.active>a{
 	color: rgb(101,10,134);
+	text-decoration: none;
 }
 
 body{
