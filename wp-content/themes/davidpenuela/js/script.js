@@ -11,7 +11,7 @@ $j(document).ready(function(){
 	setupFancyBox();    
     
 	//resize part    
-    updateResize();
+    
     $j(window).resize(function(){
         updateResize();
     });
@@ -61,9 +61,17 @@ $j(document).ready(function(){
 	});
   	
   	addAnalytics();
+  	setTimeout(function(){updateResize();},1000);	
+
  });
 
-function updateResize(){}
+function updateResize(){
+	var h = $j('.descriptionIam').height();
+	var desc_centerH = $j('.descriptionIam .desc_centerIam').height();
+	var paddingTop = h/2-desc_centerH/2;
+	$j('.descriptionIam').css('margin-top',paddingTop+'px');
+	
+}
 
 function setupFancyBox(){
 	$j('.fancybox-media').fancybox({

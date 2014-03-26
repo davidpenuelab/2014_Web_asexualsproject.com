@@ -81,9 +81,16 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
+	text-decoration: none;
+
 }
 a img {
 	border: 0;
+}
+.border-bottom {
+	border-bottom: 1px;
+	border-style:solid;
+	border-color: #f1f1f1;
 }
 /*****************************************************************/
 /* FONTS *********************************************************/
@@ -124,7 +131,6 @@ p{ font-size: 20px;}
 }
 .nav>li>a:hover, .nav>li>a:focus{
 	background: none;
-	text-decoration: underline;
 }
 .navbar-toggle .icon-bar{
 	background: rgb(98,27,128);
@@ -170,11 +176,14 @@ h2{
 .description{
 	
 }
-.imageWrapper {
+.imageWrapper, .imageWrapperIam {
     position: relative;
 }
 .imageWrapper img {
     display: block;
+}
+.imageWrapperIam img{
+	display: inline;
 }
 .imageWrapper .description{
     opacity: 0;
@@ -217,6 +226,29 @@ h2{
 .imageWrapper:hover .description2 {
     opacity: 1;
 }
+.description.iam{
+	height: inherit;
+}
+.imageWrapper .descriptionIam{
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 15px;
+	color: white;
+	text-decoration: none;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+.iam{
+	opacity: 1;
+}
+
 .section{}
 
 .innerSection{
@@ -225,6 +257,9 @@ h2{
 }
 .desc_center{
 	margin: 30% auto 20% auto;
+	font-size: 40px;
+}
+.desc_centerIam{
 	font-size: 40px;
 }
 .desc_bottom{}
@@ -284,15 +319,22 @@ h2{
   background-position: 22px 0; 	
 }
 
-.icon-arrowRight{
-	display:block; width: 12px; height: 22px; background-image: url("img/icons/arrowRight_both.png");
+.icon-arrowNext{
+	display:block; width: 14px; height: 26px; background-image: url("img/icons/arrow_both_next.png");
 	float:right;
-	margin-top: -40px;
+	margin-top: -80px;
 	margin-right: 20px;
 }
-.icon-arrowRight:hover{
-	background-position: 12px 0;
+.icon-arrowNext:hover, .icon-arrowPrev:hover{
+	background-position: 14px 0;
 }
+.icon-arrowPrev{
+	display:block; width: 14px; height: 26px; background-image: url("img/icons/arrow_both_prev.png");
+	float:right;
+	margin-top: -80px;
+	margin-right: 52px;
+}
+
 .carousel-control.left, .carousel-control.right{
 	background: none;
 
@@ -305,16 +347,16 @@ h2{
 	margin-bottom: 70px;
 }
 .footer{
-	background: gray;
-	color: white;
-	padding: 10px 0;
-	font-size: 10px;	
+	background: #f2f2f2;
+	color: #c4c4c4;
+	padding: 16px 0;
+	font-size: 13px;	
 }
 .credit{
 	text-align: right;
 }
 .credit a{
-	color: white;
+	color: #632A81;
 }
 /*****************************************************************/
 /* Infinite Scroll ***********************************************/

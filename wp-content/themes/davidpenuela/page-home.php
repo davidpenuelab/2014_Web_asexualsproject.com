@@ -26,8 +26,8 @@
 	<div class="hfeed site home_container">
 		<?php do_action( 'before' ); ?>
 		<header id="load1" class="site-header" role="banner">
-	        <nav class="navbar navbar-asexuals navbar-fixed-top" id="spyme" role="navigation">
-	            <div class="container-fluid">
+	        <nav class="navbar navbar-asexuals navbar-fixed-top border-bottom" id="spyme" role="navigation">
+	            <div class="container-fluid ">
 	                <div class="navbar-header">
 	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".asexuals-collapse">
 	                        <span class="icon-bar"></span>
@@ -43,7 +43,7 @@
 	                        <li class=""><a class="scroll-link" href="#news" data-id="news">News</a></li>
 	                        <li class=""><a class="scroll-link" href="#participate" data-id="participate">Participate</a></li>
 	                        <li class=""><a class="scroll-link" href="#contact" data-id="contact">Contact</a></li>
-	                        <li class=""><a class="scroll-link" href="#credits" data-id="contact">Credits</a></li>
+	                        <li class=""><a class="scroll-link" href="#credits" data-id="credits">Credits</a></li>
 	                    </ul>
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <li><a href="https://www.facebook.com/asexproject"><div class="icon icon-facebook"></div></a></li>
@@ -102,6 +102,28 @@
 		                    }
 		                ?>
 	                <?php endforeach; wp_reset_postdata(); ?>
+	                <!--
+<div id="image_iam" class="nopadding col-sm-4 col-md-4 imageWrapper">
+	               	 	<img width="1000" height="1000" src="<?php bloginfo( 'template_directory' ); ?>/img/Iam_empty2.png" class="img-responsive wp-post-image" alt="IAM">				
+				   	 	<a class="scroll-link" href="#participate" data-id="participate">
+					   	 	<div class="description"></div>
+					   	 	<div class="descriptionIam">
+						   	 	<div class="desc_centerIam">I'm Asexual and<br>I want to be<br>part of the project</div>
+						   	 	<div class="desc_bottom"></div>
+						   	</div>
+						</a>
+	                </div>
+-->
+	                <div id="image_iam" class="nopadding col-sm-4 col-md-4 imageWrapper">
+	               	 	<img width="1000" height="1000" src="<?php bloginfo( 'template_directory' ); ?>/img/Iam.png" class="img-responsive wp-post-image" alt="IAM">				
+				   	 	<a class="scroll-link" href="#participate" data-id="participate">
+					   	 	<div class="description"></div>
+					   	 	<div class="description2">
+						   	 	<div class="desc_centerIam"></div>
+						   	 	<div class="desc_bottom"></div>
+						   	</div>
+						</a>
+	                </div>
 				</div>
 			</div><!-- images -->
 			<div class="container-980 section about" id="load4">
@@ -156,7 +178,8 @@
 							wp_reset_postdata(); ?>
 		                </div><!--/carousel-inner--> 
 		                <!-- <a class="left carousel-control" href="#asex_news_carousel" data-slide="prev"></a> -->
-		                <a class="right carousel-control" href="#asex_news_carousel" data-slide="next"><div class="icon icon-arrowRight"></div></a>
+		                <a class="right carousel-control" href="#asex_news_carousel" data-slide="prev"><div class="icon icon-arrowPrev"></div></a>
+		                <a class="right carousel-control" href="#asex_news_carousel" data-slide="next"><div class="icon icon-arrowNext"></div></a>
 		            </div>
 		            <!--/myCarousel-->
 				</div><!-- news-->

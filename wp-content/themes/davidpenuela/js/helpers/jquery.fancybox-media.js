@@ -105,7 +105,7 @@
 			vimeo : {
 				matcher : /(?:vimeo(?:pro)?.com)\/(?:[^\d]+)?(\d+)(?:.*)/,
 				params  : {
-					autoplay      : 1,
+					autoplay      : 0,
 					hd            : 1,
 					show_title    : 1,
 					show_byline   : 1,
